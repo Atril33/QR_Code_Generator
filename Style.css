@@ -12,10 +12,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to left, #0fc2da, #2e5cda);
   font-family: 'Righteous', cursive;
+  animation: bgColor 5s linear infinite;
 }
 
+@keyframes bgColor {
+  0% {
+    background-image: linear-gradient(to left, #0fc2da, #2e5cda);
+  }
+  100% {
+    background-image: linear-gradient(to left, #2e5cda, #0fc2da);
+  }
+}
 .container {
   width: 350px;
   height: auto;
@@ -32,9 +40,10 @@ body {
 
 h1 {
   font-size: 20px;
-  margin: 5px 0;
+  margin: 10px 0;
   font-family: 'Righteous', cursive;
   text-transform: uppercase;
+  user-select: none;
 }
 
 #myinput {
